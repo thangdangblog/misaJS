@@ -6,21 +6,19 @@ function randomInt(min, max) {
 /**
  * Mô tả : Tạo TSDR
  */
-function taoTSDR() {
+function daoTaoNghiepVu() {
   const time = randomInt(2000, 4000);
 
-  console.log('Bắt đầu tạo TSDR')
+  console.log('1. Bắt đầu họp đào tạo nghiệp vụ')
 
   // Thời gian tạo TSDR là 1s
   setTimeout(() => {
-    console.log(`Đã tạo xong TSDR: ${time / 1000} giây`)
+    console.log(`2. Đã đào tạo xong nghiệp vụ: ${time / 1000} giây`)
   }, time)
 
-  console.log('Có thể xử lý gửi anh Dương duyệt TSDR');
-
-
+  console.log('3. Có thể nhận PBI');
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-  taoTSDR()
+  daoTaoNghiepVu()
 })

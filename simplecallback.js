@@ -3,23 +3,24 @@ function randomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min)
 }
 
-
 /**
  * Mô tả : Tạo TSDR
  */
-function taoTSDR(callback) {
+function daoTaoNghiepVu(callback) {
   const time = randomInt(2000, 4000)
-  console.log("Bắt đầu tạo TSDR");
+
+  console.log('1. Bắt đầu tạo họp Đào tạo nghiệp vụ');
+
   // Thời gian tạo TSDR là 1s
   setTimeout(() => {
-    console.log(`Đã tạo xong TSDR: ${time / 1000} giây`)
-    callback()
+    console.log(`2. Đã đào tạo xong nghiệp vụ: ${time / 1000} giây`)
+    callback();
   }, time)
+  
 }
 
-
 document.addEventListener('DOMContentLoaded', function () {
-  taoTSDR(() => {
-    console.log("Có thể xử lý gửi anh Dương duyệt TSDR");
+  daoTaoNghiepVu(() => {
+    console.log("3. Có thể phân chia chia PBI");
   });
 })

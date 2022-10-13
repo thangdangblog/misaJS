@@ -6,24 +6,24 @@ function randomInt(min, max) {
 /**
  * Mô tả : Thực hiện đẩy code ngoài Internet
  */
-async function dayCodeInternet() {
-  console.log('Bắt đầu tạo TSDR')
-  await taoTSDR()
-  await baoAnhDuongDuyet()
-  await baoAnhHuanDuyet()
-  await baoAnhThangDuyet()
-  await baoAnhThangDangNhap()
-  console.log('Bắt đầu xử lý đẩy code Internet')
+async function thiCongPBI() {
+  console.log('1. Bắt đầu tạo họp Đào tạo nghiệp vụ');
+  await daoTaoNghiepVu()
+  await phanChiaPBI()
+  await vietGPTC()
+  await doiDevLeadDuyetGPTC()
+  await tienHanhThiCongPBI()
+  console.log('7. Kết thúc luồng');
 }
 
 /**
  * Mô tả : Tạo TSDR
  */
-function taoTSDR() {
+ function daoTaoNghiepVu() {
   const time = randomInt(1000, 3000)
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      console.log(`Đã tạo xong TSDR: ${time / 1000} giây`)
+      console.log(`2. Đã đào tạo xong nghiệp vụ: ${time / 1000} giây`)
       return resolve()
     }, time)
   })
@@ -32,12 +32,12 @@ function taoTSDR() {
 /**
  * Mô tả : Báo anh Dương duyệt
  */
-function baoAnhDuongDuyet(callback) {
+function phanChiaPBI(callback) {
   const time = randomInt(1000, 3000)
   // Thời gian tạo TSDR là 1s
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      console.log(`Anh Dương đã duyệt TSDR: ${time / 1000} giây`)
+      console.log(`3. Đã phân chia xong PBI: ${time / 1000} giây`)
       return resolve()
     }, randomInt(1000, 3000))
   })
@@ -46,12 +46,12 @@ function baoAnhDuongDuyet(callback) {
 /**
  * Mô tả : Báo anh Dương duyệt
  */
-function baoAnhHuanDuyet(callback) {
+function vietGPTC(callback) {
   const time = randomInt(1000, 3000)
   // Thời gian tạo TSDR là 1s
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      console.log(`Anh Huân đã duyệt TSDR: ${time / 1000} giây`)
+      console.log(`4. Đã viết xong GPTC: ${time / 1000} giây`)
       return resolve()
     }, randomInt(1000, 3000))
   })
@@ -60,12 +60,12 @@ function baoAnhHuanDuyet(callback) {
 /**
  * Mô tả : Báo anh Dương duyệt
  */
-function baoAnhThangDuyet() {
+function doiDevLeadDuyetGPTC() {
   const time = randomInt(1000, 3000)
   // Thời gian tạo TSDR là 1s
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      console.log(`Anh Thắng đã duyệt PAM: ${time / 1000} giây`)
+      console.log(`5. Đã duyệt xong GPTC: ${time / 1000} giây`)
       return resolve()
     }, randomInt(1000, 3000))
   })
@@ -74,17 +74,17 @@ function baoAnhThangDuyet() {
 /**
  * Mô tả : Báo anh Dương duyệt
  */
-function baoAnhThangDangNhap(callback) {
+function tienHanhThiCongPBI(callback) {
   const time = randomInt(1000, 3000)
   // Thời gian tạo TSDR là 1s
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      console.log(`Anh Thắng đã đăng nhập SSH: ${time / 1000} giây`)
+      console.log(`6. Đã thi công PBI xong: ${time / 1000} giây`)
       return resolve()
     }, randomInt(1000, 3000))
   })
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-  dayCodeInternet()
+  thiCongPBI()
 })
